@@ -3,8 +3,8 @@ CREATE DATABASE work_db;
 USE work_db;
  
  CREATE TABLE department (
-     id INT NOT NULL PRIMARY KEY,
-     name VARCHAR(30) NOT NULL 
+     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+     department_name VARCHAR(30) NOT NULL 
  );
  
  
@@ -29,4 +29,5 @@ USE work_db;
      
      FOREIGN KEY(manager_id)
      REFERENCES role(id)
+     ON UPDATE CASCADE ON DELETE RESTRICT
      );
